@@ -1,16 +1,16 @@
-FROM python:3.9-slim
+# Use the AWS Lambda Python 3.11 base image
+FROM public.ecr.aws/lambda/python:3.11
 
-# Set the working directory
-WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+# Install dependencies into the Lambda task root
+COPY requirements.txt ./
+RUN pip3 install --upgrade pip && \
+pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
-# Install the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application files
-COPY app/ .
+# Copy application
+COPY app.py ${LAMBDA_TASK_ROOT}/app.py
 
-# Command to run the application
-CMD ["python", "app.py"]
+
+# Set the Lambda handler (module.handler)
+CMD ["app.handler"]
