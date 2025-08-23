@@ -8,7 +8,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   ECR_REPO: fastapi-notes-app
-  LAMBDA_FUNCTION_NAME: fastapi-notes-lambda
+  LAMBDA_FUNCTION_NAME: fastapi-notes-app
 
 jobs:
   deploy:
