@@ -55,7 +55,7 @@ table = dynamo_resource.Table(DYNAMO_TABLE)
 print(f"Using DynamoDB table: {table.table_name}")
 
 # FastAPI app
-app = FastAPI(title="FastAPI Notes (DynamoDB)")
+app = FastAPI(title="FastAPI Notes (DynamoDB)",root_path="/dev")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 # Pydantic models
