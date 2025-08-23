@@ -9,7 +9,7 @@ pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 
 # Copy application
-COPY app.py ${LAMBDA_TASK_ROOT}/app.py
+COPY app/app.py ${LAMBDA_TASK_ROOT}/app.py
 
 
 # Set the Lambda handler (module.handler)
