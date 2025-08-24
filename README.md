@@ -1,6 +1,6 @@
 # FastAPI Notes Application
 
-This project implements a simple Notes API using FastAPI, backed by AWS DynamoDB for data storage. The application allows users to create, list, retrieve, update, and delete notes. It is designed to be deployed as an AWS Lambda function using a Docker image.
+This project implements a simple Notes API using FastAPI, backed by AWS DynamoDB for data storage. The application allows users to create, list, retrieve, update, and delete notes. It is designed to be deployed as an AWS Lambda function using a Docker.
 
 ## Features
 
